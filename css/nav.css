@@ -1,0 +1,39 @@
+body {
+    min-height: 100%;
+}
+
+/*Navigation Styles*/
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #00AA4F;
+}
+
+/*Nav Bar Styling*/
+
+.navnar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #00AA4F;
+}
+
+.nav-link {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover{
+    color: #00AA4F;
+}
+
+/*Logo Styling*/
+
+.logo-image{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit:cover;
+    margin-right: 10px;
+    border: 2px solid #00AA4F;
+}
