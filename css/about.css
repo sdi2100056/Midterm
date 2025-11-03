@@ -1,0 +1,115 @@
+/*Hero Section*/
+.about-hero {
+    background: linear-gradient(135deg, #00AA4F 0%, #006633 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/*Padding for main sections*/
+.about-content, .carousel-section, .team-section {
+    padding: 60px 0;
+}
+
+/*Cards for team mates*/
+.feature-card, .team-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+}
+
+/*Avatars*/
+.feature-icon, .quote-icon {
+    font-size: 3rem;
+    color: #00AA4F;
+}
+
+.feature-icon {
+    margin-bottom: 20px;
+}
+
+.team-section {
+    background: #f8f9fa;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #00AA4F;
+    font-weight: bold;
+}
+
+.team-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00AA4F, #006633);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 3rem;
+    color: white;
+}
+
+.team-role, .testimonial-author {
+    color: #00AA4F;
+    font-weight: 600;
+}
+
+.team-role {
+    margin-bottom: 15px;
+}
+
+/*Carousel Items*/
+.carousel-item {
+    height: 400px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Testimonial card*/
+.testimonial-card {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+}
+
+.testimonial-text {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.quote-icon {
+    opacity: 0.3;
+}
