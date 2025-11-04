@@ -1,0 +1,219 @@
+/*Sticky Footer */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container να παίρνει όλο τον διαθέσιμο χώρο */
+.container {
+    flex: 1 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Footer να μένει κάτω */
+#footer-placeholder {
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+/* Make both columns equal height */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contact Card & Map */
+.contact-card, .map-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card {
+    border-top: 4px solid #00AA4F;
+}
+
+.map-container {
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    border: none;
+}
+
+.map-title {
+    color: #00AA4F;
+    margin-bottom: 20px;
+}
+
+/* Color for form labels */
+.form-label, .info-label {
+    color: #006633;
+    font-weight: 600;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+}
+
+.info-label {
+    margin-bottom: 0.25rem;
+}
+
+.form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #00AA4F;
+    box-shadow: 0 0 0 0.2rem rgba(0, 170, 79, 0.15);
+}
+
+/* Submit button */
+.btn-submit {
+    background-color: #00AA4F;
+    color: white;
+    border: none;
+    padding: 0.75rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Cursor style */
+.btn-submit:hover {
+    background-color: #006633;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 170, 79, 0.3);
+}
+
+/* Modal Styling */
+.modal-header {
+    background-color: #00AA4F;
+    color: white;
+    border-bottom: 3px solid #FFD700;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.info-row {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-value {
+    color: #333;
+}
+
+.success-icon {
+    color: #006633;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Social Media Styling */
+.social-media-section {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+    margin-top: auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 2px solid #00AA4F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #00AA4F;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background: #00AA4F;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Scrollable message in modal */
+#modalMessage {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+#modalMessage::-webkit-scrollbar {
+    width: 8px;
+}
+
+#modalMessage::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#modalMessage::-webkit-scrollbar-thumb {
+    background: #00AA4F;
+    border-radius: 4px;
+}
+
+#modalMessage::-webkit-scrollbar-thumb:hover {
+    background: #006633;
+}
