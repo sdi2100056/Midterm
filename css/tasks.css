@@ -1,0 +1,232 @@
+
+/*Header Section for managing tasks */
+.task-header {
+            background: linear-gradient(135deg, #00A651 0%, #008C45 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .stats-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #00A651;
+        }
+
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00A651;
+        }
+
+        .task-form-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        /*Priority Labels*/
+        .priority-high {
+            background-color: #dc3545;
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .priority-medium {
+            background-color: #ffc107;
+            color: #333;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .priority-low {
+            background-color: #28a745;
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        /*Task Status card & all related informations*/
+        .task-item {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-left: 5px solid #00A651;
+        }
+
+        .task-item.completed {
+            opacity: 0.7;
+            border-left-color: #6c757d;
+        }
+
+        .task-item.completed .task-title {
+            text-decoration: line-through;
+            color: #6c757d;
+        }
+
+        .task-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .task-description {
+            color: #666;
+            margin-bottom: 0.8rem;
+        }
+
+        .task-meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        /*Task action buttons*/
+        .task-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        /*Customed button with green theme*/
+        .btn-pao {
+            background-color: #00A651;
+            border: none;
+            color: white;
+        }
+
+        .btn-pao:hover {
+            background-color: #008C45;
+        }
+        /*Filter Section*/
+        .filter-section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #999;
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        /*Styling for form elements*/
+        .form-control:focus, .form-select:focus {
+            border-color: #00A651;
+            box-shadow: 0 0 0 0.2rem rgba(0, 166, 81, 0.25);
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #00A651 0%, #008C45 100%);
+            color: white;
+        }
+        /*Notification message */
+        .toast-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #00A651;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            z-index: 9999;
+            animation: slideIn 0.3s ease;
+        }
+        /*Animation for entrance and exit */
+        @keyframes slideIn {
+            from { transform: translateX(400px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(400px); opacity: 0; }
+        }
+/* Pagination Styles for tasks.css */
+#tasksPaginationControls {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+#tasksPaginationControls .pagination-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#tasksPaginationControls .pagination-btn {
+    padding: 10px 20px;
+    border: 2px solid #00A651;
+    background: white;
+    color: #00693e;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+#tasksPaginationControls .pagination-btn:hover:not(:disabled) {
+    background: #00A651;
+    color: white;
+}
+
+#tasksPaginationControls .pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #ccc;
+    color: #999;
+}
+
+#tasksPaginationControls .page-info {
+    font-weight: 600;
+    color: #00693e;
+}
+
+/* Limit task title to 1 line */
+.task-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Limit task description to 2 lines */
+.task-description {
+    color: #666;
+    margin-bottom: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    max-height: 3em; /* 2 lines * 1.5 line-height */
+}
+
+
