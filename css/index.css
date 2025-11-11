@@ -1,0 +1,176 @@
+/*Welcome section Styles*/
+.welcome-section {
+    min-height: 80vh; /*Takes up to 80% of the sceen's height*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+    text-align: center;
+    flex-direction: column;
+}
+.welcome-section h1 {
+    color: #00693e;
+    text-align: center;
+    width: 100%;
+}
+
+.welcome-section .lead{
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Dark mode color for title */
+body.dark-mode .welcome-section h1 {
+    color: #00a854;
+}
+/*Feature List*/
+.features-list {
+    display: grid;
+    gap: 15px;
+    justify-items: center;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 12px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    text-align: left;
+}
+
+body.dark-mode .feature-item {
+    background: #343a40;
+    color: #f8f9fa;
+}
+
+.feature-item i {
+    font-size: 1.5rem;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px; /*Rounded button*/
+}
+
+
+/*Recent Activity Style*/
+.activity-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    border-left: 4px solid #00A651;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /*Cirlce*/
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.activity-icon.added {
+    background: #d4edda;
+    color: #155724;
+}
+
+.activity-icon.completed {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.activity-icon.deleted {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.activity-icon.edited {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Media query for mobile screens - center everything */
+@media (max-width: 992px) {
+    .welcome-section .text-center {
+        text-align: center ;
+    }
+    
+    .welcome-section h1,
+    .welcome-section p,
+    .welcome-section .lead {
+        text-align: center;
+    }
+    
+    .feature-item {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/* Pagination Styles */
+.pagination-controls {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.pagination-btn {
+    padding: 10px 20px;
+    border: 2px solid #00A651;
+    background: white;
+    color: #00693e;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: #00A651;
+    color: white;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #ccc;
+    color: #999;
+}
+
+.page-info {
+    font-weight: 600;
+    color: #00693e;
+}
+
+/* Dark mode */
+body.dark-mode .pagination-btn {
+    background: #343a40;
+    color: #00a854;
+    border-color: #00a854;
+}
+
+body.dark-mode .pagination-btn:hover:not(:disabled) {
+    background: #00a854;
+    color: #1a1d21;
+}
+
+body.dark-mode .page-info {
+    color: #00a854;
+}
