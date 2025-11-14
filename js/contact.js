@@ -12,8 +12,8 @@ const message = document.querySelector('#message').value;
 //Display form data in modal
 document.querySelector('#modalName').textContent =name;
 document.querySelector('#modalEmail').textContent =email;
-document.querySelectord('#modalSubject').textContent =subject;
-document.querySelectord('#modalMessage').textContent =message;
+document.querySelector('#modalSubject').textContent =subject;
+document.querySelector('#modalMessage').textContent =message;
 
 //Show modal with bootstrap
 const modal = new bootstrap.Modal(document.querySelector('#successModal'));
